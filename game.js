@@ -13,17 +13,19 @@ var targetHeight;
 var showScore = document.getElementById("score");
 var score = 0;
 
+var i = 0;
+
 var generateRectangle = function(){
 
 	targetWidth = Math.round((Math.random() * (900 - 400) + 400)/10) *10;
-	targetHeight = Math.round((Math.random() * (500 - 200) + 200)/10) *10;
+	targetHeight = Math.round((Math.random() * (500 - 220) + 220)/10) *10;
 
 	canvas.style.width = targetWidth + "px";
-	canvas.style.height = targetHeight + "px";
+	canvas.style.height =  targetHeight + "px";
 
 	var rectangleColors = ["#19B5FE", "#1F3A93", "#9A12B3", "#663399", "#CF000F", "#2574A9", "#00B16A", "#96281B", "#F62459", "#D2527F", "#27AE60"]; 
-	canvas.style.background = rectangleColors[Math.round(Math.random()*10)];
-
+	canvas.style.background = rectangleColors[i];
+	i = (i+1)%10;
 };
 
 var game = function() {

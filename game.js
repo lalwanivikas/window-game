@@ -17,7 +17,7 @@ var i = 0;
 
 var generateRectangle = function(){
 
-	targetWidth = Math.round((Math.random() * (900 - 400) + 400)/10) *10;
+	targetWidth = Math.round((Math.random() * (900 - 420) + 420)/10) *10;
 	targetHeight = Math.round((Math.random() * (500 - 220) + 220)/10) *10;
 
 	canvas.style.width = targetWidth + "px";
